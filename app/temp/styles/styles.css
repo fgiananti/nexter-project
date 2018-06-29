@@ -151,7 +151,26 @@ body {
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center; }
+  .sidebar__btn {
+    border: none;
+    border-radius: 0;
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    margin-top: 4rem; }
+    .sidebar__btn::before, .sidebar__btn::after {
+      background-color: #fff;
+      height: 2px;
+      width: 4.5rem;
+      content: "";
+      display: block; }
+    .sidebar__btn::before {
+      transform: translateY(-1.5rem); }
+    .sidebar__btn::after {
+      transform: translateY(1.3rem); }
 
 .story__pictures {
   background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../../assets/images/back.jpg);
