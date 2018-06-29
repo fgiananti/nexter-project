@@ -10,6 +10,10 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 
+  @include respond(w1200) { // width < 1200?
+    font-size: 50%; //1rem= 8px
+  }
+
   // @include respond(tab-land) { // width < 1200?
   //   font-size: 56.25%; //1rem= 9px
   // }

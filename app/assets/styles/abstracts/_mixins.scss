@@ -6,20 +6,19 @@
   }
 }
 
-// $breakpoint argument choices:
-// - phone
-// - tab-port
-// - tab-land
-// - big-desktop
 
+// per la definzione dei breakpoint utilizziamo metodo "perfect" => quando design breaks -> breakpoint
 @mixin respond($breakpoint) {
-  @if $breakpoint == phone {
-    @media only screen and (max-width: 37.5em) { @content }; // 600px
+  @if $breakpoint == w600 {
+    @media only screen and (max-width: 37.5em) { @content }; // 800px
   }
-  @if $breakpoint == tab-port {
-    @media only screen and (max-width: 56.25em) { @content }; // 900px
+  @if $breakpoint == w800 {
+    @media only screen and (max-width: 50em) { @content }; // 800px
   }
-  @if $breakpoint == tab-land {
+  @if $breakpoint == w1000 {
+    @media only screen and (max-width: 62.5em) { @content }; // 1000px
+  }
+  @if $breakpoint == w1200 {
     @media only screen and (max-width: 75em) { @content }; // 1200px
   }
   @if $breakpoint == big-desktop {
